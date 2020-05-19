@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  /* border: red dashed 1px; */
+}
+
+/* Form */
+.createNote {
+  border-radius: 5px;
+  background-color: lightgrey;
+
+  padding: 30px 15px;
+}
+
+/* Notebook */
+.notebook {
+  border-radius: 5px;
+  background-color: lightskyblue;
+
+  padding: 30px 15px;
+}
+
+.note {
+  margin: 5px;
+}
