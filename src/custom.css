@@ -5,19 +5,22 @@
   /* border: red dashed 1px; */
 }
 
+body { 
+  background-color: rgb(240, 240, 240);
+}
+/* App */
+.woot {
+  background-color: rgb(252, 252, 252);
+  padding: 0 30px;
+}
+
 /* Form */
 .createNote {
-  border-radius: 5px;
-  background-color: lightgrey;
-
   padding: 30px 15px;
 }
 
 /* Notebook */
 .notebook {
-  border-radius: 5px;
-  background-color: lightskyblue;
-
   padding: 30px 15px;
 }
 

@@ -1,21 +1,22 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/custom.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Container from "react-bootstrap/Container"
 
-import FormExample from './BootstrapForm.js';
-import Notebook from './Notebook.js';
+import "./custom.css";
+import FormExample from "./BootstrapForm";
+import Notebook from "./Notebook";
 
 class App extends Component {
   state = {
     notes: [
       {
-        'title': 'Day 1 - The Disaster',
-        'contents': 'Today I started. And it was a disaster'
+        title: "Day 1 - The Disaster",
+        contents: "Today I started. And it was a disaster"
       },
       {
-        'title': 'Afterthought',
-        'contents': 'Yeah... But! At least I started. I feel pretty good about that one'
+        title: "Afterthought",
+        contents: "Yeah... But! At least I started. I feel pretty good about that one"
       }
     ]
   };
@@ -40,13 +41,12 @@ class App extends Component {
   render() {
     const { notes } = this.state;
 
-    console.log(notes);
-
     return (
-      <div className='woot'>
+      <Container className="woot">
         <FormExample handleSubmit={this.handleSubmit} />
+        <hr />
         <Notebook notes={notes} removeNote={this.removeNote} />
-      </div>
+      </Container>
     );
   }
 }

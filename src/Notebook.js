@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Container from 'react-bootstrap/Container';
-
 import CardDeck from 'react-bootstrap/CardDeck';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
@@ -10,13 +8,12 @@ const Notebook = props => {
   const {notes, removeNote} = props;
 
   return (
-    <Container className="notebook">
+    <div className="notebook">
       <h1>Notebook</h1>
-      <hr />
       <CardDeck className="d-flex flex-column">
         <NotebookBody notes={notes} removeNote={removeNote}/>
       </CardDeck>
-    </Container>
+    </div>
   );
 };
 
