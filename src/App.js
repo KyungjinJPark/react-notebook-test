@@ -38,11 +38,18 @@ class App extends Component {
     });
   };
 
+  firebaseTest = () => {
+    
+  }
+
   render() {
     const { notes } = this.state;
 
     return (
       <Container className="woot">
+
+        <button onClick={this.firebaseTest}>Testme</button>
+        
         <FormExample handleSubmit={this.handleSubmit} />
         <hr />
         <Notebook notes={notes} removeNote={this.removeNote} />
