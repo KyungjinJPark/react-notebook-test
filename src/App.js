@@ -43,6 +43,12 @@ class App extends Component {
     });
   };
 
+/*Pass prevState in here.
+So this.setState(prevState => ({notes: [...prevState.notes, note] }))
+This prevents issues if this.state.notes is being updated while we're trying to grab it within this
+function. We don't want to accidentally grab the old version of this.state.notes.
+
+*/
   handleSubmit = note => {
     this.setState({
       notes: [...this.state.notes, note]
@@ -75,7 +81,6 @@ class App extends Component {
 
   render() {
     const { notes } = this.state;
-
     return (
       <Container className="woot">
 
