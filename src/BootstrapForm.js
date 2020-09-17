@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 
-import Container from 'react-bootstrap/Container';
-
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
-const FormExample = props => {
+const Form = props => {
   const [title, setTitle] = useState('');
   const [contents, setContents] = useState('');
 
@@ -39,7 +37,7 @@ const FormExample = props => {
   };
   
   return (
-    <Container className="createNote">
+    <div className="createNote">
       <h1>Create a Note to add to Your Notebook</h1>
       <label htmlFor="title">Title</label>
       <InputGroup className="mb-3">
@@ -71,8 +69,8 @@ const FormExample = props => {
       <Button variant="primary" onClick={sumbitForm}>
         Save Note
       </Button>
-    </Container>
+    </div>
   );
 };
 
-export default FormExample
+export default Form;
